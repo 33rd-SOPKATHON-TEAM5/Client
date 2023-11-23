@@ -2,10 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
+
     ${reset}
 
     *{
         box-sizing: border-box;
+        margin: 0;
     }
 
     html,
@@ -14,9 +16,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        
         padding: 0 auto;
         width: 1046px;
       }
