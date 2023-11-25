@@ -11,10 +11,10 @@ function NickName() {
   };
   return (
     <S.Wrapper>
-      <S.Title>선물 받을 이름을 알려줘!</S.Title>
+      <S.Title>선물 받을 별명 알려줘!</S.Title>
       <Input
         maxLength={5}
-        placeholder={"이름을 입력해줘"}
+        placeholder={"별명 입력해줘"}
         customStyle="height: 5.1rem"
       />
       <S.Img src={PreSentImg} />

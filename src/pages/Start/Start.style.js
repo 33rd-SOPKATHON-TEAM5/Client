@@ -10,31 +10,31 @@ export const Wrapper = styled.div`
 
 export const TextContainer = styled.div`
   display: flex;
+  position: fixed;
+  bottom: 11rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  z-index: 1;
 `;
 
 export const Text = styled.p`
   display: flex;
   font-size: 16px;
+  display: relative;
+  bottom: 8rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   color: #fff;
   text-align: center;
-  font-family: TSCHotplaceGothicOTF;
 `;
 
-export const StartImg = styled.div`
+export const StartImg = styled.img`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: gray;
-  width: 100%;
-  height: 40rem;
-  margin-top: 5rem;
 `;
 
 export const ButtonContainer = styled.div`

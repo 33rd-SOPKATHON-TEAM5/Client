@@ -28,8 +28,11 @@ export const Title = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 400;
-  font-size: 22px;
   margin-top: 7rem;
   margin-bottom: 3.3rem;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #fff;
 `;
