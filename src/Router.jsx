@@ -1,12 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import MainTest from "./components/main/MainTest";
+
+import CardPage from "./pages/CardPage/CardPage";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainTest />} />
+        <Route path="/card" element={<CardPage />} />
       </Routes>
     </BrowserRouter>
   );

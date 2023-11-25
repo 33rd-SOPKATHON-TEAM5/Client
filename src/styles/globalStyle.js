@@ -18,7 +18,6 @@ const GlobalStyle = createGlobalStyle`
     body {
         
         padding: 0 auto;
-        width: 1046px;
       }
     
       a {
