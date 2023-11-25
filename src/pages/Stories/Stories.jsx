@@ -26,7 +26,6 @@ const Stories = () => {
             'Content-Type': 'application/json',
           },
         });
-        console.log(res.data.data);
         setStoriesData(res.data.data.cry_list);
         setDataLength(res.data.data.count);
         setLaoding(false);
@@ -49,11 +48,11 @@ const Stories = () => {
         <ResultDiv>{          
           storiesData.map((item, idx) =>(
             item.cryReason.length <= 25 ? (
-              <SmallDiv userName={item.userNickname} cryReason={item.cryReason} />
+              <SmallDiv key={idx} userName={item.userNickname} cryReason={item.cryReason} />
             ) : item.cryReason.length <= 71 ? (
-              <MediumDiv userName={item.userNickname} cryReason={item.cryReason} />
+              <MediumDiv key={idx} userName={item.userNickname} cryReason={item.cryReason} />
             ) : (
-              <LargeDiv userName={item.userNickname} cryReason={item.cryReason} />
+              <LargeDiv key={idx} userName={item.userNickname} cryReason={item.cryReason} />
             )
           ))}
         </ResultDiv>
