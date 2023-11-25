@@ -7,6 +7,7 @@ import SmallDiv from '../../components/stories/SmallDiv';
 import MediumDiv from '../../components/stories/MediumDiv';
 import LargeDiv from '../../components/stories/LargeDiv';
 import Footer from '../../components/stories/Footer';
+import Loading from '../../components/stories/Loading';
 
 const Stories = () => {
   const API_URL = import.meta.env.VITE_APP_BASE_URL;
@@ -25,8 +26,9 @@ const Stories = () => {
             'Content-Type': 'application/json',
           },
         });
-        console.log(res.data.data.cry_list);
+        console.log(res.data.data);
         setStoriesData(res.data.data.cry_list);
+        setDataLength(res.data.data.count);
         setLaoding(false);
       } catch (err) {
         console.log(err);
@@ -37,13 +39,13 @@ const Stories = () => {
 
 
   if(loading) {
-    return <div>loading</div>
+    return <Loading />
   }
 
   return (
     <PageWrapper>
       <ContentWrapper>
-        <Header />
+        <Header allLength={dataLength}/>
         <ResultDiv>{          
           storiesData.map((item, idx) =>(
             item.cryReason.length <= 25 ? (

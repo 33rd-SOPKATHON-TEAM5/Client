@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <HeaderContainer>
       <Title>지금까지 울보산타에게 선물 받은 사람 수</Title>
-      <ResultNum>N명</ResultNum>
+      <ResultNum>{`${props.allLength}명`}</ResultNum>
     </HeaderContainer>
   );
 };
@@ -28,11 +28,13 @@ const Title = styled.div`
   height: 1.9rem;
 
   font-family: Pretendard;
+
+  font-style: normal;
+
   font-size: 16px;
   font-weight: 600;
   line-height: 19.09px;
   color: black;
-
 `;
 
 const ResultNum = styled.div`
@@ -41,9 +43,11 @@ const ResultNum = styled.div`
   align-items: center;
   height: 3.1rem;
 
-  font-family: Pretendard;
+  font-family: EliceDXNeolli;
   font-size: 20px;
+  font-style: normal;
   font-weight: 500;
+
   line-height: 26px;
   color: black;
 `;
