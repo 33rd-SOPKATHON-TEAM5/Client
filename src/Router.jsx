@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import Main from '../../pages/Main/Main';
 import { styled } from "styled-components";
 import MainTest from "./components/main/MainTest";
+import OthersResult from "./pages/OthersResult/OthersResult";
 
 const Router = () => {
   return (
@@ -10,12 +11,14 @@ const Router = () => {
       <Wrapper>
         <Routes>
           <Route path="/" element={<MainTest />} />
+          <Route path="/othersResult" element={<OthersResult />} />
         </Routes>
       </Wrapper>
     </BrowserRouter>
   );
 };
 
+// background color 수정함
 const Wrapper = styled.div`
   max-width: 425px;
   width: 100vw;
@@ -25,7 +28,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: red;
+  background-color: white; 
   word-break: break-all;
 `;
 
