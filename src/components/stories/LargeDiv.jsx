@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { BigCardImage } from '../../assets/Svgs/Index';
+import { BigCardImage } from "../../assets/Svgs/Index";
 
 const LargeDiv = () => {
   return (
@@ -54,5 +54,6 @@ const UserNickName = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 19.36px;
+
   color: #f7f7f7;
 `;

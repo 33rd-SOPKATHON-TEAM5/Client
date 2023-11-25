@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
+
 // import { useRecoilState } from "recoil";
 import Button from "../../../components/Button";
 import Input from "../../../components/Input";
 import * as S from "./SadContent.style";
+
 import { userIdState, userNicknameState } from "../../../recoil/atom";
 import { instance } from "../../../apis/api.instance";
 import { useState } from "react";

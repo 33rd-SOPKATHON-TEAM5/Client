@@ -1,15 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { MiddleCardImage } from '../../assets/Svgs/Index';
+import { MiddleCardImage } from "../../assets/Svgs/Index";
 
 const MediumDiv = () => {
   return (
     <MediumContainer>
       <ContentDiv>
         <Content>
-          4년만난 남자친구랑 헤어져서 울었어요ㅠㅠ 남자친구랑 진짜 정말로 좋아했는데 그 자식이 저를 차버렸지
-          뭐에요....나쁜놈....
+          4년만난 남자친구랑 헤어져서 울었어요ㅠㅠ 남자친구랑 진짜 정말로
+          좋아했는데 그 자식이 저를 차버렸지 뭐에요....나쁜놈....
         </Content>
         <UserNickName>아이디</UserNickName>
       </ContentDiv>
@@ -53,5 +53,6 @@ const UserNickName = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 19.36px;
+
   color: #f7f7f7;
 `;

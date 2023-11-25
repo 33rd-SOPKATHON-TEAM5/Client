@@ -9,6 +9,7 @@ import { userNicknameState } from "../../../recoil/atom";
 
 function NickName() {
   const [nickname, setNickname] = useRecoilState(userNicknameState);
+
   const navigate = useNavigate();
   const handleButton = () => {
     navigate("/onboarding/content");
