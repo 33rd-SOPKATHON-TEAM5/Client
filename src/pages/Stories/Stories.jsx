@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 
 import Header from '../../components/stories/Header';
 import SmallDiv from '../../components/stories/SmallDiv';
@@ -8,6 +9,25 @@ import LargeDiv from '../../components/stories/LargeDiv';
 import Footer from '../../components/stories/Footer';
 
 const Stories = () => {
+  const API_URL = import.meta.env.VITE_APP_BASE_URL;
+
+  useEffect(() => {
+    // 비동기 함수 선언
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`${API_URL}/cry`, {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        console.log(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  },[]);
+
   return (
     <PageWrapper>
       <ContentWrapper>
