@@ -36,10 +36,12 @@ const ContentDiv = styled.div`
 `;
 
 const Content = styled.div`
+  font-family: Pretendard;
   font-size: 16px;
+  font-style: normal;
   font-weight: 600;
-  color: #f7f7f7;
   line-height: 19.09px;
+  color: #f7f7f7;
 `;
 
 const UserNickName = styled.div`
@@ -47,7 +49,10 @@ const UserNickName = styled.div`
   bottom: 0;
   right: 0;
 
+  font-family: Pretendard;
   font-size: 16px;
+  font-style: normal;
   font-weight: 400;
+  line-height: 19.36px;
   color: #f7f7f7;
 `;
