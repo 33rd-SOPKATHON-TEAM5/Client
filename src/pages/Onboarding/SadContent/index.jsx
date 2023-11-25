@@ -5,6 +5,7 @@ import * as S from "./SadContent.style";
 // import { userIdState } from "../../../recoil/atom";
 //import { instance } from "../../../apis/api.instance";
 import { useState } from "react";
+import { LeaseImg, SantaImg } from "../../../assets/Images/Index";
 
 function SadContent() {
   // const [userRecoilId, setUserRecoilId] = useRecoilState(userIdState);
@@ -19,20 +20,31 @@ function SadContent() {
   //   });
   // };
 
-  const handleChangeInput = (e) => {
-    setContent(e.target.value);
+  const onChangeInput = (e) => {
+    const input = e.target.value;
+    if (input.length <= 100) {
+      console.log("");
+    } else {
+      console.log("100자이하");
+    }
+    setContent(input);
   };
   return (
     <S.Wrapper>
-      <S.Title>울었던 경험 하나 알려줘!</S.Title>
+      <S.Title>울었던 이야기 하나 알려줄래...?</S.Title>
       <Input
         maxLength={100}
         customStyle="height: 12.7rem"
-        onChange={handleChangeInput}
+        onChange={onChangeInput}
         value={content}
+        placeholder="울었던 이야기를 알려줘"
       />
+      <S.Img src={LeaseImg} />
+      <S.Icon src={SantaImg} />
       <S.ButtonContainer>
-        <Button>제출하기</Button>
+        <Button customStyle="width: 95%; background-color: #DE332E; color: #ffff;">
+          울보산타에게 편지 전달하기
+        </Button>
       </S.ButtonContainer>
     </S.Wrapper>
   );

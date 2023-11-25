@@ -7,6 +7,20 @@ export const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 0 1.6rem;
+  background-color: #008236;
+`;
+
+export const Img = styled.img`
+  display: flex;
+  margin-top: 6rem;
+`;
+
+export const Icon = styled.img`
+  display: flex;
+  position: relative;
+  bottom: 7rem;
+  right: 12rem;
+  z-index: 1;
 `;
 
 export const ButtonContainer = styled.div`
@@ -23,8 +37,11 @@ export const Title = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 400;
-  font-size: 22px;
   margin-top: 7rem;
   margin-bottom: 3.3rem;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #fff;
 `;

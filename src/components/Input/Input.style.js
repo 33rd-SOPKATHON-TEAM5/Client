@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const Wrapper = styled.input`
   display: flex;
-  justify-content: center;
-  align-items: center;
 
   border-radius: 0.6rem;
   border: 1px solid;
