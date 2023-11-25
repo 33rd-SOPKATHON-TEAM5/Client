@@ -27,8 +27,11 @@ const Title = styled.div`
   align-items: center;
   height: 1.9rem;
 
-  font-size: 1.6rem;
+  font-family: Pretendard;
+  font-size: 16px;
   font-weight: 600;
+  line-height: 19.09px;
+  color: black;
 
 `;
 
@@ -38,6 +41,9 @@ const ResultNum = styled.div`
   align-items: center;
   height: 3.1rem;
 
-  font-size: 2rem;
+  font-family: Pretendard;
+  font-size: 20px;
   font-weight: 500;
+  line-height: 26px;
+  color: black;
 `;
