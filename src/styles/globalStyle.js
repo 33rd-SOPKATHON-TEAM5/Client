@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -18,7 +18,6 @@ const GlobalStyle = createGlobalStyle`
     body {
         
         padding: 0 auto;
-        width: 1046px;
       }
     
       a {
