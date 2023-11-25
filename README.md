@@ -2,7 +2,7 @@
 
 <h2> 울보산타 </h2>
 
-<img src=""  alt="서비스대표-이미지" />
+![서비스 대표 이미지](https://github.com/33rd-SOPKATHON-TEAM5/Client/assets/98143826/e6f0aab5-2c39-42eb-98f5-e4ed16a32043)
 <div>”울면 안돼, 울면 안돼, 산타할아버지는 우는 아이에게 선물을 안주신대”
 왜 울면 안될까요? 왜 울면 선물을 못받을까요?
 
@@ -23,17 +23,19 @@
 <h2> ✨ (서비스) 주요 기능 </h2>
 
 <h3> 1️⃣ 나의 운 이야기 </h3>
-<img src=""  alt="기능1-대표이미지" />
+![울었던 경험 입력](https://github.com/33rd-SOPKATHON-TEAM5/Client/assets/98143826/6827b98f-1a61-4468-b641-38900958b0e2)
+
+
 <div > 울었던 경험을 작성할 수 있습니다. 글자수는 100자로 제한됩니다.  <br/></div>
 
 
 <h3> 2️⃣ 울보산타의 답장 </h3>
-<img src=""  alt="기능1-대표이미지" />
+![산타의 카드](https://github.com/33rd-SOPKATHON-TEAM5/Client/assets/98143826/3addec92-e757-4a46-aaa5-14d9b7351d86)
 <div >울보산타가 나의 이야기를 읽고 답장을 줍니다.  <br/></div>
 
 
 <h3> 3️⃣ 모두의 이야기 </h3>
-<img src=""  alt="기능1-대표이미지" />
+![다른사람들의 운 경험](https://github.com/33rd-SOPKATHON-TEAM5/Client/assets/98143826/9a84456a-dcbf-4adc-bf0a-d3de17da0bc6)
 <div >‘나의 운 이야기’ 에 입력된 이야기를 한번에 볼 수 있습니다.  <br/></div>
 
 <h2> 👥 Team </h2>
@@ -143,4 +145,5 @@
  
 
 <h3>After</h3>
-<img src="" alt="웨비 팀원들 사진 (after)"/>
+![IMG_0167](https://github.com/33rd-SOPKATHON-TEAM5/Client/assets/98143826/59271b23-1284-44af-b1dc-58f415073de5)
+
