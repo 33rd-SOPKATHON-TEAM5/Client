@@ -1,37 +1,33 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-// import Main from '../../pages/Main/Main';
-import MainTest from './components/main/MainTest';
-import { styled } from 'styled-components';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Start from "./pages/Start";
+import NickName from "./pages/Onboarding/NickName";
+import SadContent from "./pages/Onboarding/SadContent";
+import CardPage from "./pages/CardPage/CardPage";
+import OthersResult from "./pages/Stories/Stories";
 
 
 const Router = () => {
   return (
-  
+    // <Wrapper>
     <BrowserRouter>
-      <Wrapper>
-        <Routes>
-          <Route path="/" element={<MainTest />} />
-        </Routes>
-      </Wrapper>
+      <Routes>
+        <Route path="/" element={<Start />} />
+        <Route path="/onboarding/nickname" element={<NickName />} />
+        <Route path="/onboarding/content" element={<SadContent />} />
+        <Route path="/card" element={<CardPage />} />
+        <Route path="/stories" element={<OthersResult />} />
+      </Routes>
     </BrowserRouter>
-
+    // </Wrapper>
   );
 };
 
-const Wrapper=styled.div`
-  max-width: 425px;
-  width: 100vw;
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  overflow: hidden;
-  background-color: #fff;
+// const Wrapper=styled.div`
+//   display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: flex-start;
   
-`
-
+// `
 
 export default Router;
