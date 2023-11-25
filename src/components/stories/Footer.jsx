@@ -2,13 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Footer = () => {
+  const handleCopyClipBoard = async(e, text) => {
+    e.preventDefault();
+    try{
+      await navigator.clipboard.writeText(text);
+      alert("클립보드에 링크가 복사되었어요.")
+    } catch(err) {
+      console.log(err.message);
+    }
+  }
+
+
   return (
     <FooterContainer>
       <HomeBtn>
-        <HomeBtnText>울보산타 알려주기</HomeBtnText>
+        <HomeBtnText onClick={(e) => handleCopyClipBoard(e, 'url')}>울보산타 알려주기</HomeBtnText>
       </HomeBtn>
       <ShareBtn>
-        <ShareBtnText>울보산타 다시만나기</ShareBtnText>
+        <ShareBtnText>울보산타 다시 만나기</ShareBtnText>
       </ShareBtn>
     </FooterContainer>
   );
