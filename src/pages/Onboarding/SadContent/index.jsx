@@ -9,28 +9,22 @@ import { useState } from "react";
 import { LeaseImg, SantaImg } from "../../../assets/Images/Index";
 import ProgressBar from "../../../components/ProgressBar";
 import { useLocation } from "react-router-dom";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 
 function SadContent() {
   const [userRecoilId, setUserRecoilId] = useRecoilState(userIdState);
-  const [userRecoilNickname, setRecoilNickname] =
-    useRecoilState(userNicknameState);
+  const user_nickname = useRecoilValue(userNicknameState);
   const [cry_reason, setContent] = useState("");
   const [error, setError] = useState(false);
-  const location = useLocation();
-  const params = new URLSearchParams(location.search);
-  const user_nickname = params.get("nickname");
 
   const handleButton = () => {
-    const formData = [user_nickname, cry_reason];
+    const formData = { user_nickname, cry_reason };
 
     const fetchAuth = () => instance.post(`/cry`, formData);
     fetchAuth().then((response) => {
       setUserRecoilId(response.data.cry_id);
-      setRecoilNickname(response.data.user_nickname);
     });
     console.log(userRecoilId);
-    console.log(userRecoilNickname);
   };
 
   const onChangeInput = (e) => {
