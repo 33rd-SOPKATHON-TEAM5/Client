@@ -6,7 +6,7 @@ function Input({
   value,
   placeholder,
   disabled,
-  customStyle,
+  customstyle,
   maxLength,
   onChange,
   errorMessage,
@@ -18,7 +18,7 @@ function Input({
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}
-        customStyle={customStyle}
+        customstyle={customstyle}
         maxLength={maxLength}
       />
       {errorMessage && <S.Error>글자수를 초과 했어!</S.Error>}

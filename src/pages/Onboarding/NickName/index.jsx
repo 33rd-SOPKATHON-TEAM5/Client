@@ -17,14 +17,13 @@ function NickName() {
 
     setNickname(input);
   };
-  const isInputEmpty = !(nickname === "");
   return (
     <S.Wrapper>
       <S.Title>선물 받을 별명 알려줘!</S.Title>
       <Input
         maxLength={5}
         placeholder={"별명 입력해줘"}
-        customStyle="height: 5.1rem"
+        customstyle="height: 5.1rem"
         onChange={onChangeInput}
         value={nickname}
       />
@@ -33,8 +32,7 @@ function NickName() {
       <S.ButtonContainer>
         <Button
           onClick={handleButton}
-          customStyle="width: 90%; background-color: #DE332E; color: #ffff;"
-          disabled={isInputEmpty}
+          customstyle="width: 90%; background-color: #DE332E; color: #ffff;"
         >
           울었던 이야기 쓰러가기
         </Button>

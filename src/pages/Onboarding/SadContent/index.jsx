@@ -36,7 +36,7 @@ function SadContent() {
       <S.Title>울었던 이야기 하나 알려줄래...?</S.Title>
       <Input
         maxLength={100}
-        customStyle="height: 12.7rem"
+        customstyle="height: 12.7rem"
         onChange={onChangeInput}
         value={content}
         placeholder="울었던 이야기를 알려줘"
@@ -46,7 +46,7 @@ function SadContent() {
       <S.Img src={LeaseImg} />
       <S.Icon src={SantaImg} />
       <S.ButtonContainer>
-        <Button customStyle="width: 95%; background-color: #DE332E; color: #ffff;">
+        <Button customstyle="width: 95%; background-color: #DE332E; color: #ffff;">
           울보산타에게 편지 전달하기
         </Button>
       </S.ButtonContainer>
