@@ -29,6 +29,7 @@ export const Text = styled.p`
 
   color: #fff;
   text-align: center;
+
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
