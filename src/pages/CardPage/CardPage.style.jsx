@@ -1,14 +1,14 @@
-import styled from 'styled-components';
-import {CardImage} from '../../assets/Images/Index';
+import styled from "styled-components";
+import { CardImage } from "../../assets/Images/Index";
 
-export const Container=styled.div`
+export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 7.2rem 1.6rem 4.4rem 1.6rem;
   /* max-width: 475px; */
 `;
 
-export const Wrapper=styled.div`
+export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -16,17 +16,17 @@ export const Wrapper=styled.div`
   align-items: center;
   justify-content: space-between;
 
-  & > header{
+  & > header {
     position: relative;
-    & > img{
+    & > img {
       position: absolute;
       top: 0;
       left: 20rem;
     }
   }
 
-  & .title{
-    color: var(--red, #DE332E);
+  & .title {
+    color: var(--red, #de332e);
     text-align: center;
 
     /* title/22_regular */
@@ -37,16 +37,16 @@ export const Wrapper=styled.div`
     line-height: 139%; /* 30.58px */
   }
 
-  footer{
+  footer {
     display: flex;
     gap: 1.9rem;
 
-    .to-storis-btn{
+    .to-storis-btn {
       width: 16.2rem;
       height: 5rem;
       border-radius: 6px;
       background: var(--green, #008236);
-      color: var(--white, #F7F7F7);
+      color: var(--white, #f7f7f7);
       text-align: center;
 
       /* body/16_bold */
@@ -59,42 +59,62 @@ export const Wrapper=styled.div`
   }
 `;
 
-export const Card=styled.div`
-position: relative;
+export const Card = styled.div`
+  position: relative;
   background-image: url(${CardImage});
   background-size: contain;
   width: 343px;
   height: 423px;
 
-  color: var(--white, #F7F7F7);
+  color: var(--white, #f7f7f7);
   text-align: center;
   font-family: Pretendard;
   line-height: 2.8rem;
 
-  & > .gift-to{
+  & > .gift-to {
     position: absolute;
     top: 16px;
     left: 28px;
-font-size: 1.6rem;
-font-weight: 600;
-
+    font-size: 1.6rem;
+    font-weight: 600;
   }
 
-  & > .gift-content{
+  & > .gift-content {
     width: 270px;
     height: 214px;
     position: absolute;
     top: 72px;
     left: 36px;
-font-size: 2rem;
-font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 600;
   }
 
-  & > .gift-from{
+  & > .gift-from {
     position: absolute;
     bottom: 16px;
     right: 30px;
-font-size: 1.6rem;
-font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 600;
   }
-`
+`;
+
+//Loading
+
+export const Loading = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  & img {
+    width: 5rem;
+    object-fit: fill;
+  }
+`;

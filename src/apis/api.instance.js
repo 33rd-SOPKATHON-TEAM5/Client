@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiBaseUrl = "https://www.sopkathon-team5.p-e.kr/";
+const apiBaseUrl = import.meta.env.VITE_APP_BASE_URL;
 
 export const instance = axios.create({
   baseURL: apiBaseUrl,

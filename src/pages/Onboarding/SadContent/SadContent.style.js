@@ -45,5 +45,5 @@ export const Title = styled.p`
   font-weight: 700;
   color: #fff;
 
-  font-family: EliceDXNeolliOTF;
+  font-family: EliceDXNeolliBold;
 `;
