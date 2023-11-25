@@ -7,8 +7,9 @@ export const Wrapper = styled.button`
   background-color: gray;
   border-radius: 0.4rem;
   padding: 2rem;
-  ${({ customStyle }) => customStyle}
-  font-family: Pretendard;
+
+  ${({ customstyle }) => customstyle}
+
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 700;

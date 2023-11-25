@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { MiddleCardImage } from '../../assets/Svgs/Index';
+import { MiddleCardImage } from "../../assets/Svgs/Index";
 
 const MediumDiv = (props) => {
   const {userName, cryReason} = props;

@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { BigCardImage } from '../../assets/Svgs/Index';
+import { BigCardImage } from "../../assets/Svgs/Index";
 
 const LargeDiv = (props) => {
   const { userName, cryReason } = props;

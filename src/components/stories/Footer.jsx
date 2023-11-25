@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
-  const [linkBtnContext, setLinkBtnContext] = useState('울보산타 알려주기');
+  const [linkBtnContext, setLinkBtnContext] = useState("울보산타 알려주기");
 
   const handleCopyClipBoard = async (e, text) => {
     e.preventDefault();
     try {
       await navigator.clipboard.writeText(text);
-      setLinkBtnContext('링크 복사 완료!');
+      setLinkBtnContext("링크 복사 완료!");
     } catch (err) {
       console.log(err.message);
     }
@@ -19,7 +19,7 @@ const Footer = () => {
 
   const onClickMoveHome = (e) => {
     e.preventDefault();
-    navigate('/');
+    navigate("/");
   };
 
   return (
@@ -28,7 +28,9 @@ const Footer = () => {
         <HomeBtnText onClick={(e) => handleCopyClipBoard(e, 'https://sopcathon-5.vercel.app/')}>{linkBtnContext}</HomeBtnText>
       </HomeBtn>
       <ShareBtn>
-        <ShareBtnText onClick={onClickMoveHome}>울보산타 다시 만나기</ShareBtnText>
+        <ShareBtnText onClick={onClickMoveHome}>
+          울보산타 다시 만나기
+        </ShareBtnText>
       </ShareBtn>
     </FooterContainer>
   );
@@ -64,8 +66,10 @@ const HomeBtn = styled.button`
 // 폰트지정
 const HomeBtnText = styled.span`
   font-family: Pretendard;
+  font-family: Pretendard;
   font-size: 16px;
   font-weight: 700;
+  color: #f7f7f7;
   color: #f7f7f7;
 `;
 

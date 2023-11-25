@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { SmallCardImage } from '../../assets/Svgs/Index';
+import { SmallCardImage } from "../../assets/Svgs/Index";
 
 // content에 가져온 데이터
 // 닉네임에 get 해온 유저닉네임

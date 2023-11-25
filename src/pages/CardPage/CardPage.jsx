@@ -1,82 +1,117 @@
-import React,{useState} from 'react'
-import * as S from './CardPage.style';
-import html2canvas from 'html2canvas';
+import React, { useEffect, useState } from "react";
+import * as S from "./CardPage.style";
+import html2canvas from "html2canvas";
 // import { saveAs } from 'file-saver';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import CopyLink from '../../components/CopyLink/CopyLink';
-import {IcDownload} from '../../assets/Svgs/Index';
-
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import CopyLink from "../../components/CopyLink/CopyLink";
+import { IcDownload } from "../../assets/Svgs/Index";
+import { LoadingCryingSanta } from "../../assets/Images/Index";
+import { useRecoilValue } from "recoil";
+import { userIdState } from "../../recoil/atom";
 
 const CardPage = () => {
   const nav = useNavigate();
 
-//스크린샷 캡처함수
-const captureScreenshot = async (element) => {
-  const canvas = await html2canvas(element);
-  return canvas.toDataURL('image/png');
-};
+  //스크린샷 캡처함수
+  const captureScreenshot = async (element) => {
+    const canvas = await html2canvas(element);
+    return canvas.toDataURL("image/png");
+  };
 
-//스크린샷 저장함수
-const saveScreenshot = (dataUrl, filename) => {
-  const link = document.createElement('a');
-  link.href = dataUrl;
-  link.download = filename || 'screenshot.png';
-  link.click();
-};
+  //스크린샷 저장함수
+  const saveScreenshot = (dataUrl, filename) => {
+    const link = document.createElement("a");
+    link.href = dataUrl;
+    link.download = filename || "screenshot.png";
+    link.click();
+  };
 
-//버튼 클릭 시 
-const handleSaveScreenshot = async () => {
-  const element = document.getElementById('element-to-capture');
-  const screenshot = await captureScreenshot(element);
-  saveScreenshot(screenshot, 'cryingSanta.png');
-};
+  //버튼 클릭 시
+  const handleSaveScreenshot = async () => {
+    const element = document.getElementById("element-to-capture");
+    const screenshot = await captureScreenshot(element);
+    saveScreenshot(screenshot, "cryingSanta.png");
+  };
 
-//서버 연동
-const API_URL = import.meta.env.VITE_APP_BASE_URL;
+  //서버 연동
+  const API_URL = import.meta.env.VITE_APP_BASE_URL;
 
-const [state,setState]=useState({
-  name:"수욘",
-  content:"힘둘겠당 ㅠㅠ",
-  nth:0
-})
+  const [state, setState] = useState({
+    name: null,
+    content: null,
+    nth: 0,
+  });
 
-const getInfo=async ()=>{
+  const id = useRecoilValue(userIdState);
+  console.log(id);
 
-  try {
-    const res =await axios.get(`${API_URL}}`);
-    
-  } catch {
-    (err)=>console.log(err);
+  useEffect(() => {
+    // 비동기 함수 선언
+    const fetchData = async () => {
+      setIsLoading(true);
+      try {
+        const res = await axios.get(`${API_URL}/card/${id}`);
+        console.log(res);
+        setState({
+          name: res.data.data.user_nickname,
+          content: res.data.data.message,
+          nth: res.data.data.index,
+        });
+        setIsLoading(false);
+      } catch (err) {
+        console.log(err);
+        setIsLoading(false);
+      }
+    };
+
+    // 비동기 함수 호출
+    fetchData();
+  }, [id]); // 빈 배열은 이 effect가 마운트될 때 단 한 번만 실행되어야 함을 나타냅니다.
+
+  const [isLoading, setIsLoading] = useState(true); // 로딩 상태
+
+  if (isLoading) {
+    return (
+      <S.Loading>
+        <div>
+          <img src={LoadingCryingSanta} alt="울보산타" />
+          <p>울보산타가 메세지 적는 중...</p>
+        </div>
+      </S.Loading>
+    ); // 여기에 로딩 인디케이터나 스피너 등을 넣을 수 있습니다.
   }
-}
 
-
-
-
-  return (
-    <S.Container>
-      <S.Wrapper>
-        <header>
-          <p className='title'>내가주는 선물이야!</p>
-          <img src={IcDownload} onClick={handleSaveScreenshot}></img>
+  if (state) {
+    return (
+      <S.Container>
+        <S.Wrapper>
+          <header>
+            <p className="title">내가주는 선물이야!</p>
+            <img src={IcDownload} onClick={handleSaveScreenshot}></img>
           </header>
           <article>
-            <S.Card id="element-to-capture" >
-              <p className='gift-to'>{`To.${state.name}`}</p>
-              <p className='gift-content'>{state.content}</p>
-              <p className='gift-from'>{`from. 울보산타가 주는 ${state.nth}번째 선물`}</p>
+            <S.Card id="element-to-capture">
+              <p className="gift-to">{`To.${state.name}`}</p>
+              <p className="gift-content">{state.content}</p>
+              <p className="gift-from">{`from. 울보산타가 주는 ${state.nth}번째 선물`}</p>
             </S.Card>
           </article>
-        <footer>
-          <CopyLink content="울보산타 알려주기"></CopyLink>
-          <button className='to-storis-btn' onClick={(e)=>{
-            nav('/storis')
-          }}>다들 울었다던데,,</button>
-        </footer>
-      </S.Wrapper>
-    </S.Container>
-  )
-}
+          <footer>
+            <CopyLink content="울보산타 알려주기"></CopyLink>
+            <button
+              className="to-storis-btn"
+              onClick={(e) => {
+                nav("/storis");
+              }}
+            >
+              다들 울었다던데,,
+            </button>
+          </footer>
+        </S.Wrapper>
+      </S.Container>
+    );
+  }
+};
 
-export default CardPage
+export default CardPage;
