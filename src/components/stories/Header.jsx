@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Header = () => {
   return (
@@ -32,7 +32,6 @@ const Title = styled.div`
   font-weight: 600;
   line-height: 19.09px;
   color: black;
-
 `;
 
 const ResultNum = styled.div`

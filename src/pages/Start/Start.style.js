@@ -20,6 +20,7 @@ export const TextContainer = styled.div`
   align-items: center;
   gap: 1rem;
   z-index: 1;
+
   width: 80%;
 `;
 
