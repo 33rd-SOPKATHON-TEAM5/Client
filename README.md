@@ -105,8 +105,7 @@
 
 <h2>  📄 컨벤션 및 브랜치 전략 </h2>
 
-[5조 컨벤션 및 브랜치 전략](https://www.notion.so/5-71840bb6c8ee48d79134ee5d20dbd87d)
-
+[5조 컨벤션 및 브랜치 전략](https://lemon-leather-188.notion.site/5-71840bb6c8ee48d79134ee5d20dbd87d?pvs=4)
 
 <br/>
 
