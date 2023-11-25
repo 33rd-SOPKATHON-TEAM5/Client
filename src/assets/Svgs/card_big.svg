@@ -1,0 +1,28 @@
+<svg width="343" height="181" viewBox="0 0 343 181" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="343" height="181" rx="6" fill="#008236"/>
+<g opacity="0.2">
+<rect width="343" height="181" rx="6" fill="#008236"/>
+<rect x="42" y="82" width="15" height="8" fill="#F7F7F7"/>
+<circle cx="51" cy="123" r="36" fill="#F7F7F7"/>
+<mask id="mask0_99_2028" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="15" y="87" width="72" height="72">
+<circle cx="51" cy="123" r="36" fill="#F7F7F7"/>
+</mask>
+<g mask="url(#mask0_99_2028)">
+<rect x="48.5825" y="72" width="11" height="85.5545" transform="rotate(34.6006 48.5825 72)" fill="#5BB6E2"/>
+<rect x="68.5825" y="85" width="11" height="85.5545" transform="rotate(34.6006 68.5825 85)" fill="#5BB6E2"/>
+<rect x="86.5825" y="100" width="11" height="85.5545" transform="rotate(34.6006 86.5825 100)" fill="#5BB6E2"/>
+</g>
+<line x1="49.5" y1="82" x2="49.5" y2="1" stroke="#F7F7F7" stroke-width="3"/>
+<rect x="277" y="18" width="15" height="8" fill="#F7F7F7"/>
+<circle cx="286" cy="59" r="36" fill="#F7F7F7"/>
+<mask id="mask1_99_2028" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="250" y="23" width="72" height="72">
+<circle cx="286" cy="59" r="36" fill="#F7F7F7"/>
+</mask>
+<g mask="url(#mask1_99_2028)">
+<rect x="283.583" y="8" width="11" height="85.5545" transform="rotate(34.6006 283.583 8)" fill="#DE332E"/>
+<rect x="303.583" y="21" width="11" height="85.5545" transform="rotate(34.6006 303.583 21)" fill="#DE332E"/>
+<rect x="321.583" y="36" width="11" height="85.5545" transform="rotate(34.6006 321.583 36)" fill="#DE332E"/>
+</g>
+<line x1="284.5" y1="18" x2="284.5" y2="6.55671e-08" stroke="#F7F7F7" stroke-width="3"/>
+</g>
+</svg>
