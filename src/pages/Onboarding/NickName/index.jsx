@@ -10,7 +10,7 @@ function NickName() {
   const [nickname, setNickname] = useState();
   const navigate = useNavigate();
   const handleButton = () => {
-    navigate("/onboarding/content");
+    navigate("/onboarding/content?nickname=${encodeURIComponent(nickname)}");
   };
   const onChangeInput = (e) => {
     const input = e.target.value;

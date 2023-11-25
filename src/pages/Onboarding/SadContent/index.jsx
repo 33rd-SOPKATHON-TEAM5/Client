@@ -7,14 +7,18 @@ import * as S from "./SadContent.style";
 import { useState } from "react";
 import { LeaseImg, SantaImg } from "../../../assets/Images/Index";
 import ProgressBar from "../../../components/ProgressBar";
+//import { useLocation } from "react-router-dom";
 
 function SadContent() {
   // const [userRecoilId, setUserRecoilId] = useRecoilState(userIdState);
   const [content, setContent] = useState("");
   const [error, setError] = useState(false);
+  // const location = useLocation();
+  // const params = new URLSearchParams(location.search);
+  //const nickname = params.get("nickname");
 
   // const handleButton = () => {
-  //   const formData = [];
+  //   const formData = [nickname,content];
   //   const fetchAuth = () => instance.post(``, formData);
   //   fetchAuth().then((response) => {
   //   const userId = response.data.id;
