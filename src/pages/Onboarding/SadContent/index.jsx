@@ -11,6 +11,7 @@ import ProgressBar from "../../../components/ProgressBar";
 function SadContent() {
   // const [userRecoilId, setUserRecoilId] = useRecoilState(userIdState);
   const [content, setContent] = useState("");
+  const [error, setError] = useState(false);
 
   // const handleButton = () => {
   //   const formData = [];
@@ -26,7 +27,7 @@ function SadContent() {
     if (input.length <= 100) {
       console.log("");
     } else {
-      console.log("100자이하");
+      setError(true);
     }
     setContent(input);
   };
@@ -39,6 +40,7 @@ function SadContent() {
         onChange={onChangeInput}
         value={content}
         placeholder="울었던 이야기를 알려줘"
+        errorMessage={error}
       />
       <ProgressBar pageNum={2} />
       <S.Img src={LeaseImg} />

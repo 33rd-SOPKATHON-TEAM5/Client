@@ -12,4 +12,7 @@ export const Wrapper = styled.button`
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 700;
+  &:disabled {
+    background-color: #a1a1a1;
+  }
 `;
