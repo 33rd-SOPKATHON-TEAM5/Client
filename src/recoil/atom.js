@@ -8,6 +8,6 @@ export const userIdState = atom({
 });
 
 export const userNicknameState = atom({
-  key: "userIdState",
+  key: "userNicknameState",
   default: "",
 });
