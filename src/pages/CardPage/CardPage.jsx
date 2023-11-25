@@ -36,7 +36,7 @@ const CardPage = () => {
 
   //서버 연동
   const API_URL = import.meta.env.VITE_APP_BASE_URL;
-
+  const [isLoading, setIsLoading] = useState(true); // 로딩 상태
   const [state, setState] = useState({
     name: null,
     content: null,
@@ -67,9 +67,9 @@ const CardPage = () => {
 
     // 비동기 함수 호출
     fetchData();
-  }, [id]); // 빈 배열은 이 effect가 마운트될 때 단 한 번만 실행되어야 함을 나타냅니다.
+  }, [id]); 
 
-  const [isLoading, setIsLoading] = useState(true); // 로딩 상태
+
 
   if (isLoading) {
     return (
@@ -79,7 +79,7 @@ const CardPage = () => {
           <p>울보산타가 메세지 적는 중...</p>
         </div>
       </S.Loading>
-    ); // 여기에 로딩 인디케이터나 스피너 등을 넣을 수 있습니다.
+    ); 
   }
 
   if (state) {
@@ -102,7 +102,7 @@ const CardPage = () => {
             <button
               className="to-storis-btn"
               onClick={(e) => {
-                nav("/storis");
+                nav("/stories");
               }}
             >
               다들 울었다던데,,
