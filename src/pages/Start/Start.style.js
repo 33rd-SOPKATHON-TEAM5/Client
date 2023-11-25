@@ -29,6 +29,7 @@ export const Text = styled.p`
   line-height: normal;
   color: #fff;
   text-align: center;
+  font-family: EliceDXNeolliOTF;
 `;
 
 export const StartImg = styled.img`
