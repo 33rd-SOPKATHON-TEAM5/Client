@@ -1,13 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import MainTest from "./components/main/MainTest";
-import OthersResult from "./pages/OthersResult/OthersResult";
+import OthersResult from "./pages/Stories/Stories";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainTest />} />
+        <Route path="/stories" element={<OthersResult />} />
       </Routes>
     </BrowserRouter>
   );

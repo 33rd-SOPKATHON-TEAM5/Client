@@ -3,21 +3,30 @@ import styled from 'styled-components';
 
 const MediumDiv = () => {
   return (
-    <Medium>
+    <MediumContainer>
+      <Content>
+      뭐에요....나쁜놈....자차가나다라마바사아자차
       4년만난 남자친구랑 헤어져서 울었어요ㅠㅠ 남자친구랑 진짜 정말로 좋아했는데 그 자식이 저를 차버렸지
-      뭐에요....나쁜놈....
-    </Medium>
+      </Content>
+      <UserNickName>아이디</UserNickName>
+    </MediumContainer>
   );
 };
 
 export default MediumDiv;
 
-const Medium = styled.div`
+const MediumContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 34.4rem;
+  width: 100%;
   height: 14.4rem;
   border-radius: 0.6rem;
-  background-color: red;
+  background-color: grey;
+  padding: 1rem 2rem;
 `;
+
+const Content = styled.div``;
+
+const UserNickName = styled.span``;
