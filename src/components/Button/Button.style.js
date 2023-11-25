@@ -5,6 +5,11 @@ export const Wrapper = styled.button`
   justify-content: center;
   align-items: center;
   background-color: gray;
-  border-radius: 2rem;
+  border-radius: 0.4rem;
   padding: 2rem;
+  ${({ customStyle }) => customStyle}
+  font-family: Pretendard;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
 `;
