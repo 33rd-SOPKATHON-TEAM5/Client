@@ -32,7 +32,7 @@ const ContentDiv = styled.div`
   height: 8.8rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 `;
 const Content = styled.div`

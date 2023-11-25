@@ -47,7 +47,7 @@ const ResultDiv = styled.main`
   display: flex;
 
   width: 100%;
-  height: calc(100vh - 18rem);
+  height: calc(100vh - 11.3rem - 8rem);
   padding: 3rem 1.6rem;
 
   border: 1px solid;

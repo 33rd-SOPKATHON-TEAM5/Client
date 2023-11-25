@@ -31,7 +31,7 @@ const ContentDiv = styled.div`
   height: 12.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 `;
 
