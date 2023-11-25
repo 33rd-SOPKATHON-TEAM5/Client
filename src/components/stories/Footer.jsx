@@ -63,9 +63,10 @@ const HomeBtn = styled.button`
 
 // 폰트지정
 const HomeBtnText = styled.span`
+  font-family: Pretendard;
   font-size: 16px;
-  color: #f7f7f7;
   font-weight: 700;
+  color: #f7f7f7;
 `;
 
 const ShareBtn = styled.button`
@@ -80,7 +81,8 @@ const ShareBtn = styled.button`
 
 // 폰트지정
 const ShareBtnText = styled.span`
+  font-family: Pretendard;
   font-size: 16px;
-  color: #f7f7f7;
   font-weight: 700;
+  color: #f7f7f7;
 `;
