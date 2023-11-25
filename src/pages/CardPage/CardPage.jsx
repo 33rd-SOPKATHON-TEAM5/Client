@@ -1,11 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
 import * as S from './CardPage.style';
 import html2canvas from 'html2canvas';
 // import { saveAs } from 'file-saver';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import CopyLink from '../../components/CopyLink/CopyLink';
+import {icDownload} from '../../assets/Svgs'
 
 
 const CardPage = () => {
+  const nav = useNavigate();
 
 //스크린샷 캡처함수
 const captureScreenshot = async (element) => {
@@ -31,6 +35,12 @@ const handleSaveScreenshot = async () => {
 //서버 연동
 const API_URL = import.meta.env.VITE_APP_BASE_URL;
 
+const [state,setState]=useState({
+  name:"수욘",
+  content:"힘둘겠당 ㅠㅠ",
+  nth:0
+})
+
 const getInfo=async ()=>{
 
   try {
@@ -48,16 +58,21 @@ const getInfo=async ()=>{
     <S.Container>
       <S.Wrapper>
         <header>
-          <span>내가주는 선물이야!</span>
-          <span><button onClick={handleSaveScreenshot}>다운</button></span></header>
+          <p className='title'>내가주는 선물이야!</p>
+          <img src={icDownload} onClick={handleSaveScreenshot}></img>
+          </header>
           <article>
-            <S.Card id="element-to-capture">
-              <p>어어아</p>
+            <S.Card id="element-to-capture" >
+              <p className='gift-to'>{`To.${state.name}`}</p>
+              <p className='gift-content'>{state.content}</p>
+              <p className='gift-from'>{`from. 울보산타가 주는 ${state.nth}번째 선물`}</p>
             </S.Card>
           </article>
         <footer>
-          <button>친구 초대하기</button>
-          <button>다른 사람 운 이유보기</button>
+          <CopyLink content="울보산타 알려주기"></CopyLink>
+          <button className='to-storis-btn' onClick={(e)=>{
+            nav('/storis')
+          }}>다들 울었다던데,,</button>
         </footer>
       </S.Wrapper>
     </S.Container>

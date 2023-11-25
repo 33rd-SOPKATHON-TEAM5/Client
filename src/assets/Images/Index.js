@@ -1,1 +1,1 @@
-// export { default as ArrowDownIcon } from './ic_arrowdown.svg';
+export { default as CardImage } from './card.png';
