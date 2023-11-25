@@ -1,1 +1,1 @@
-export { default as icDownload } from './IcDownload.svg';
+export { default as IcDownload } from './IcDownload.svg';

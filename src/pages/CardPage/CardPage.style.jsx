@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {CardImage} from '../../assets/Images';
+import {CardImage} from '../../assets/Images/Index';
 
 export const Container=styled.div`
   width: 100vw;

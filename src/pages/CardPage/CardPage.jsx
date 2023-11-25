@@ -5,7 +5,7 @@ import html2canvas from 'html2canvas';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import CopyLink from '../../components/CopyLink/CopyLink';
-import {icDownload} from '../../assets/Svgs/Index';
+import {IcDownload} from '../../assets/Svgs/Index';
 
 
 const CardPage = () => {
@@ -59,7 +59,7 @@ const getInfo=async ()=>{
       <S.Wrapper>
         <header>
           <p className='title'>내가주는 선물이야!</p>
-          <img src={icDownload} onClick={handleSaveScreenshot}></img>
+          <img src={IcDownload} onClick={handleSaveScreenshot}></img>
           </header>
           <article>
             <S.Card id="element-to-capture" >
