@@ -32,8 +32,8 @@ export const Title = styled.p`
   margin-bottom: 3.3rem;
   font-size: 20px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 26px;
+  font-weight: 700;
+  line-height: 2.6rem;
   color: #fff;
   font-family: EliceDXNeolliOTF;
 `;
