@@ -48,6 +48,7 @@ const FooterContainer = styled.div`
   width: 100vw;
   height: 8rem;
   padding: 1.6rem;
+  margin-top: 1.4rem;
 `;
 
 const HomeBtn = styled.button`

@@ -13,11 +13,15 @@ const Stories = () => {
       <ContentWrapper>
         <Header />
         <ResultDiv>
-          <ResultContainer>
-            <SmallDiv />
-            <MediumDiv />
-            <LargeDiv />
-          </ResultContainer>
+          <SmallDiv />
+          <MediumDiv />
+          <LargeDiv />
+          <SmallDiv />
+          <MediumDiv />
+          <LargeDiv />
+          <SmallDiv />
+          <MediumDiv />
+          <LargeDiv />
         </ResultDiv>
         <Footer />
       </ContentWrapper>
@@ -47,19 +51,14 @@ const ResultDiv = styled.main`
   display: flex;
 
   width: 100%;
-  height: calc(100vh - 11.3rem - 8rem);
-  padding: 3rem 1.6rem;
-
-  border: 1px solid;
+  height: calc(100vh - 11.3rem - 8rem - 1.4rem);
+  padding: 0 1.6rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
 `;
 
 const ResultContainer = styled.div`
   width: 100%;
   height: 100%;
-
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
 `;

@@ -19,7 +19,7 @@ const MediumDiv = () => {
 
 export default MediumDiv;
 
-const MediumContainer = styled.div`
+const MediumContainer = styled.article`
   width: 100%;
   height: 14.4rem;
   padding: 2.8rem 2.4rem;

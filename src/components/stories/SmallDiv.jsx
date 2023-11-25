@@ -18,7 +18,7 @@ const SmallDiv = () => {
 
 export default SmallDiv;
 
-const SmallContainer = styled.div`
+const SmallContainer = styled.article`
   width: 100%;
   height: 10.6rem;
   padding: 2.8rem 2.4rem;

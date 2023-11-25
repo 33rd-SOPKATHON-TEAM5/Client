@@ -18,7 +18,7 @@ const HeaderContainer = styled.header`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 4.9rem 0 1.4rem 0;
+  padding: 4.9rem 0 1.6rem 0;
 `;
 
 const Title = styled.div`
