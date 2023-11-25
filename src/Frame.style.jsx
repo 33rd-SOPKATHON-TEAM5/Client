@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Frame=styled.div`
+export const Frame = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
