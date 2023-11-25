@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./CardPage.style";
 import html2canvas from "html2canvas";
 // import { saveAs } from 'file-saver';
@@ -6,6 +6,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import CopyLink from "../../components/CopyLink/CopyLink";
 import { IcDownload } from "../../assets/Svgs/Index";
+import { LoadingCryingSanta } from "../../assets/Images/Index";
+import { useRecoilValue } from "recoil";
+import { userIdState } from "../../recoil/atom";
 
 const CardPage = () => {
   const nav = useNavigate();
@@ -33,49 +36,82 @@ const CardPage = () => {
 
   //서버 연동
   const API_URL = import.meta.env.VITE_APP_BASE_URL;
-
+  const [isLoading, setIsLoading] = useState(true); // 로딩 상태
   const [state, setState] = useState({
-    name: "수욘",
-    content: "힘둘겠당 ㅠㅠ",
+    name: null,
+    content: null,
     nth: 0,
   });
 
-  const getInfo = async () => {
-    try {
-      const res = await axios.get(`${API_URL}}`);
-    } catch {
-      (err) => console.log(err);
-    }
-  };
+  const id = useRecoilValue(userIdState);
+  console.log(id);
 
-  return (
-    <S.Container>
-      <S.Wrapper>
-        <header>
-          <p className="title">내가주는 선물이야!</p>
-          <img src={IcDownload} onClick={handleSaveScreenshot}></img>
-        </header>
-        <article>
-          <S.Card id="element-to-capture">
-            <p className="gift-to">{`To.${state.name}`}</p>
-            <p className="gift-content">{state.content}</p>
-            <p className="gift-from">{`from. 울보산타가 주는 ${state.nth}번째 선물`}</p>
-          </S.Card>
-        </article>
-        <footer>
-          <CopyLink content="울보산타 알려주기"></CopyLink>
-          <button
-            className="to-storis-btn"
-            onClick={(e) => {
-              nav("/storis");
-            }}
-          >
-            다들 울었다던데,,
-          </button>
-        </footer>
-      </S.Wrapper>
-    </S.Container>
-  );
+  useEffect(() => {
+    // 비동기 함수 선언
+    const fetchData = async () => {
+      setIsLoading(true);
+      try {
+        const res = await axios.get(`${API_URL}/card/${id}`);
+        console.log(res);
+        setState({
+          name: res.data.data.user_nickname,
+          content: res.data.data.message,
+          nth: res.data.data.index,
+        });
+        setIsLoading(false);
+      } catch (err) {
+        console.log(err);
+        setIsLoading(false);
+      }
+    };
+
+    // 비동기 함수 호출
+    fetchData();
+  }, [id]); 
+
+
+
+  if (isLoading) {
+    return (
+      <S.Loading>
+        <div>
+          <img src={LoadingCryingSanta} alt="울보산타" />
+          <p>울보산타가 메세지 적는 중...</p>
+        </div>
+      </S.Loading>
+    ); 
+  }
+
+  if (state) {
+    return (
+      <S.Container>
+        <S.Wrapper>
+          <header>
+            <p className="title">내가주는 선물이야!</p>
+            <img src={IcDownload} onClick={handleSaveScreenshot}></img>
+          </header>
+          <article>
+            <S.Card id="element-to-capture">
+              <p className="gift-to">{`To.${state.name}`}</p>
+              <p className="gift-content">{state.content}</p>
+              <p className="gift-from">{`from. 울보산타가 주는 ${state.nth}번째 선물`}</p>
+            </S.Card>
+          </article>
+          <footer>
+            <CopyLink content="울보산타 알려주기"></CopyLink>
+            <button
+              className="to-storis-btn"
+              onClick={(e) => {
+                nav("/stories");
+              }}
+            >
+              다들 울었다던데,,
+            </button>
+          </footer>
+        </S.Wrapper>
+      </S.Container>
+    );
+  }
 };
 
 export default CardPage;

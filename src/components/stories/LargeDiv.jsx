@@ -3,14 +3,13 @@ import styled from "styled-components";
 
 import { BigCardImage } from "../../assets/Svgs/Index";
 
-const LargeDiv = () => {
+const LargeDiv = (props) => {
+  const { userName, cryReason } = props;
   return (
     <LargeContainer>
       <ContentDiv>
-        <Content>
-          가나다라마바사아자차가나다라마바사아자차가나다라마바사아자차가나다라마바사아자차가나다라마바사아자차가나다라마바사아자차가나다라마바사아자차가나다라마바사아자차가나다라마바사아자차가나다라마바사아자차
-        </Content>
-        <UserNickName>아이디</UserNickName>
+        <Content>{cryReason}</Content>
+        <UserNickName>{userName}</UserNickName>
       </ContentDiv>
     </LargeContainer>
   );
@@ -37,11 +36,12 @@ const ContentDiv = styled.div`
 
 const Content = styled.div`
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 19.09px;
   color: #f7f7f7;
+  text-align: center;
 `;
 
 const UserNickName = styled.div`
@@ -50,10 +50,9 @@ const UserNickName = styled.div`
   right: 0;
 
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: 19.36px;
-
   color: #f7f7f7;
 `;

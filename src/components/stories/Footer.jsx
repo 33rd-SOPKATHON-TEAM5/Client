@@ -25,9 +25,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <HomeBtn>
-        <HomeBtnText onClick={(e) => handleCopyClipBoard(e, "url")}>
-          {linkBtnContext}
-        </HomeBtnText>
+        <HomeBtnText onClick={(e) => handleCopyClipBoard(e, 'https://sopcathon-5.vercel.app/')}>{linkBtnContext}</HomeBtnText>
       </HomeBtn>
       <ShareBtn>
         <ShareBtnText onClick={onClickMoveHome}>
@@ -68,8 +66,10 @@ const HomeBtn = styled.button`
 // 폰트지정
 const HomeBtnText = styled.span`
   font-family: Pretendard;
+  font-family: Pretendard;
   font-size: 16px;
   font-weight: 700;
+  color: #f7f7f7;
   color: #f7f7f7;
 `;
 
