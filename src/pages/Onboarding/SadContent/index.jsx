@@ -12,6 +12,7 @@ import { LeaseImg, SantaImg } from "../../../assets/Images/Index";
 import ProgressBar from "../../../components/ProgressBar";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { useNavigate } from "react-router";
+import axios from "axios";
 
 function SadContent() {
   const [userRecoilId, setUserRecoilId] = useRecoilState(userIdState);
@@ -20,14 +21,16 @@ function SadContent() {
   const [error, setError] = useState(false);
   const navigate = useNavigate();
 
-  const handleButton = () => {
+  const handleButton = async () => {
     const formData = { user_nickname, cry_reason };
 
-    const fetchAuth = () => instance.post(`/cry`, formData);
-    fetchAuth().then((response) => {
-      setUserRecoilId(response.data.data.cry_id);
-      console.log(response.data);
-    });
+    //const fetchAuth = () => instance.post(`/cry`, formData);
+    const API_URL = import.meta.env.VITE_APP_BASE_URL;
+    const response = await axios.post(`${API_URL}/cry`, formData);
+
+    setUserRecoilId(response.data.data.cry_id);
+    console.log(response.data);
+
     console.log(userRecoilId);
     navigate("/card");
   };
