@@ -3,15 +3,15 @@ import styled from "styled-components";
 
 import { MiddleCardImage } from "../../assets/Svgs/Index";
 
-const MediumDiv = () => {
+const MediumDiv = (props) => {
+  const {userName, cryReason} = props;
   return (
     <MediumContainer>
       <ContentDiv>
         <Content>
-          4년만난 남자친구랑 헤어져서 울었어요ㅠㅠ 남자친구랑 진짜 정말로
-          좋아했는데 그 자식이 저를 차버렸지 뭐에요....나쁜놈....
+          {cryReason}
         </Content>
-        <UserNickName>아이디</UserNickName>
+        <UserNickName>{userName}</UserNickName>
       </ContentDiv>
     </MediumContainer>
   );
@@ -37,10 +37,11 @@ const ContentDiv = styled.div`
 `;
 const Content = styled.div`
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 19.09px;
   font-weight: 600;
   color: #f7f7f7;
+  text-align:center;
 `;
 
 const UserNickName = styled.div`
@@ -49,10 +50,9 @@ const UserNickName = styled.div`
   right: 0;
 
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: 19.36px;
-
   color: #f7f7f7;
 `;
