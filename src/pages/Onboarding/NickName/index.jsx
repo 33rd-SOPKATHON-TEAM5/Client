@@ -17,7 +17,7 @@ function NickName() {
 
     setNickname(input);
   };
-  // const isInputEmpty = !(nickname === "");
+  const isInputEmpty = !(nickname === "");
   return (
     <S.Wrapper>
       <S.Title>선물 받을 별명 알려줘!</S.Title>
@@ -34,6 +34,7 @@ function NickName() {
         <Button
           onClick={handleButton}
           customStyle="width: 90%; background-color: #DE332E; color: #ffff;"
+          disabled={isInputEmpty}
         >
           울었던 이야기 쓰러가기
         </Button>
