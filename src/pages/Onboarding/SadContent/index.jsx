@@ -25,7 +25,8 @@ function SadContent() {
 
     const fetchAuth = () => instance.post(`/cry`, formData);
     fetchAuth().then((response) => {
-      setUserRecoilId(response.data.cry_id);
+      setUserRecoilId(response.data.data.cry_id);
+      console.log(response.data);
     });
     console.log(userRecoilId);
     navigate("/card");

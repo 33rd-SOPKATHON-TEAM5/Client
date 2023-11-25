@@ -44,6 +44,7 @@ const CardPage = () => {
   });
 
   const id = useRecoilValue(userIdState);
+  console.log(id);
 
   useEffect(() => {
     // 비동기 함수 선언
@@ -51,7 +52,7 @@ const CardPage = () => {
       setIsLoading(true);
       try {
         const res = await axios.get(`${API_URL}/card/${id}`);
-        console.log(res.data);
+        console.log(res);
         setState({
           name: res.data.data.user_nickname,
           content: res.data.data.message,
@@ -66,7 +67,7 @@ const CardPage = () => {
 
     // 비동기 함수 호출
     fetchData();
-  }, []); // 빈 배열은 이 effect가 마운트될 때 단 한 번만 실행되어야 함을 나타냅니다.
+  }, [id]); // 빈 배열은 이 effect가 마운트될 때 단 한 번만 실행되어야 함을 나타냅니다.
 
   const [isLoading, setIsLoading] = useState(true); // 로딩 상태
 
