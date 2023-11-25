@@ -22,6 +22,7 @@ const LargeContainer = styled.article`
   height: 18.1rem;
   padding: 2.8rem 2.4rem;
   border-radius: 0.6rem;
+  background-color: #008236;
   background-image: url(${BigCardImage});
 `;
 
