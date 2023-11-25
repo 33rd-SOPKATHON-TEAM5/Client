@@ -8,7 +8,6 @@ import { instance } from "../../../apis/api.instance";
 import { useState } from "react";
 import { LeaseImg, SantaImg } from "../../../assets/Images/Index";
 import ProgressBar from "../../../components/ProgressBar";
-import { useLocation } from "react-router-dom";
 import { useRecoilState, useRecoilValue } from "recoil";
 
 function SadContent() {
