@@ -6,6 +6,7 @@ import * as S from "./SadContent.style";
 //import { instance } from "../../../apis/api.instance";
 import { useState } from "react";
 import { LeaseImg, SantaImg } from "../../../assets/Images/Index";
+import ProgressBar from "../../../components/ProgressBar";
 
 function SadContent() {
   // const [userRecoilId, setUserRecoilId] = useRecoilState(userIdState);
@@ -39,6 +40,7 @@ function SadContent() {
         value={content}
         placeholder="울었던 이야기를 알려줘"
       />
+      <ProgressBar pageNum={2} />
       <S.Img src={LeaseImg} />
       <S.Icon src={SantaImg} />
       <S.ButtonContainer>

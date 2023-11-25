@@ -12,14 +12,13 @@ export const Wrapper = styled.div`
 
 export const Img = styled.img`
   display: flex;
-  margin-top: 3rem;
   margin-left: 1rem;
 `;
 
 export const Icon = styled.img`
   display: flex;
   position: relative;
-  bottom: 5rem;
+  bottom: 6rem;
   right: 12.3rem;
   z-index: 1;
 `;

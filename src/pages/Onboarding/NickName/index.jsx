@@ -3,6 +3,7 @@ import Button from "../../../components/Button";
 import Input from "../../../components/Input";
 import * as S from "./NickName.style";
 import { PreSentImg } from "../../../assets/Images/Index";
+import ProgressBar from "../../../components/ProgressBar";
 
 function NickName() {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ function NickName() {
         placeholder={"별명 입력해줘"}
         customStyle="height: 5.1rem"
       />
+      <ProgressBar pageNum={1} />
       <S.Img src={PreSentImg} />
       <S.ButtonContainer>
         <Button
