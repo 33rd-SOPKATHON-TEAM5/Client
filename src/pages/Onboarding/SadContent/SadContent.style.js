@@ -39,10 +39,10 @@ export const Title = styled.p`
   align-items: center;
   margin-top: 7rem;
   margin-bottom: 3.3rem;
-  font-size: 20px;
+
+  font-size: 1.6rem;
   font-style: normal;
-  font-weight: 500;
-  line-height: 26px;
+  font-weight: 700;
   color: #fff;
-  font-family: EliceDXNeolliOTF;
+  font-family: EliceDXNeolliBold;
 `;
