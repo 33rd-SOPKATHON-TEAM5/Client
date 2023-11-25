@@ -1,7 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
 import EliceDXNeolliBold from '../assets/fonts/EliceDXNeolliBold.ttf';
 import EliceDXNeolliLight from '../assets/fonts/EliceDXNeolliLight.ttf';
 import EliceDXNeolliMedium from '../assets/fonts/EliceDXNeolliMedium.ttf';
