@@ -10,9 +10,14 @@ import Footer from '../../components/stories/Footer';
 
 const Stories = () => {
   const API_URL = import.meta.env.VITE_APP_BASE_URL;
+  const [storiesData, setStoriesData] = useState();
+  const [loading, setLaoding] = useState(true);
+  const [dataLength, setDataLength] = useState();
 
+  // storiesData 저장함
   useEffect(() => {
     // 비동기 함수 선언
+    setLaoding(true);
     const fetchData = async () => {
       try {
         const res = await axios.get(`${API_URL}/cry`, {
@@ -20,28 +25,35 @@ const Stories = () => {
             'Content-Type': 'application/json',
           },
         });
-        console.log(res.data);
+        console.log(res.data.data.cry_list);
+        setStoriesData(res.data.data.cry_list);
+        setLaoding(false);
       } catch (err) {
         console.log(err);
       }
     };
     fetchData();
-  },[]);
+  }, []);
+
+
+  if(loading) {
+    return <div>loading</div>
+  }
 
   return (
     <PageWrapper>
       <ContentWrapper>
         <Header />
-        <ResultDiv>
-          <SmallDiv />
-          <MediumDiv />
-          <LargeDiv />
-          <SmallDiv />
-          <MediumDiv />
-          <LargeDiv />
-          <SmallDiv />
-          <MediumDiv />
-          <LargeDiv />
+        <ResultDiv>{          
+          storiesData.map((item, idx) =>(
+            item.cryReason.length <= 25 ? (
+              <SmallDiv userName={item.userNickname} cryReason={item.cryReason} />
+            ) : item.cryReason.length <= 71 ? (
+              <MediumDiv userName={item.userNickname} cryReason={item.cryReason} />
+            ) : (
+              <LargeDiv userName={item.userNickname} cryReason={item.cryReason} />
+            )
+          ))}
         </ResultDiv>
         <Footer />
       </ContentWrapper>

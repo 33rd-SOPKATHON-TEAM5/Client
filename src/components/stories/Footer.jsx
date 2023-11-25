@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <HomeBtn>
-        <HomeBtnText onClick={(e) => handleCopyClipBoard(e, 'url')}>{linkBtnContext}</HomeBtnText>
+        <HomeBtnText onClick={(e) => handleCopyClipBoard(e, 'https://sopcathon-5.vercel.app/')}>{linkBtnContext}</HomeBtnText>
       </HomeBtn>
       <ShareBtn>
         <ShareBtnText onClick={onClickMoveHome}>울보산타 다시 만나기</ShareBtnText>

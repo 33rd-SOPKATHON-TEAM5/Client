@@ -5,12 +5,13 @@ import { SmallCardImage } from '../../assets/Svgs/Index';
 
 // content에 가져온 데이터
 // 닉네임에 get 해온 유저닉네임
-const SmallDiv = () => {
+const SmallDiv = (props) => {
+  const {userName, cryReason} = props;
   return (
     <SmallContainer>
       <ContentDiv>
-        <Content>4년만난 남자친구랑 헤어져서 울었어요ㅠㅠㅠ</Content>
-        <UserNickName>닉네임</UserNickName>
+        <Content>{cryReason}</Content>
+        <UserNickName>{userName}</UserNickName>
       </ContentDiv>
     </SmallContainer>
   );
@@ -36,11 +37,12 @@ const ContentDiv = styled.div`
 `;
 
 const Content = styled.div`
-font-family: Pretendard;
-font-size: 16px;
-line-height: 19.09px;
-font-weight: 600;
-color: black;
+  font-family: Pretendard;
+  font-size: 14px;
+  line-height: 19.09px;
+  font-weight: 600;
+  color: black;
+  text-align: center;
 `;
 
 const UserNickName = styled.div`
@@ -49,7 +51,7 @@ const UserNickName = styled.div`
   right: 0;
 
   font-family: Pretendard;
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: 19.36px;
