@@ -5,7 +5,7 @@ import html2canvas from 'html2canvas';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import CopyLink from '../../components/CopyLink/CopyLink';
-import {icDownload} from '../../assets/Svgs'
+import {icDownload} from '../../assets/Svgs';
 
 
 const CardPage = () => {
