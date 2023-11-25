@@ -35,4 +35,5 @@ export const Title = styled.p`
   font-weight: 500;
   line-height: 26px;
   color: #fff;
+  font-family: EliceDXNeolliOTF;
 `;

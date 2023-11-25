@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { SmallCardImage } from '../../assets/Svgs/Index';
+import { SmallCardImage } from "../../assets/Svgs/Index";
 
 // content에 가져온 데이터
 // 닉네임에 get 해온 유저닉네임
@@ -36,10 +36,11 @@ const ContentDiv = styled.div`
 `;
 
 const Content = styled.div`
+  font-family: Pretendard;
   font-size: 16px;
-  font-weight: 600;
-  color: #f7f7f7;
   line-height: 19.09px;
+  font-weight: 600;
+  color: black;
 `;
 
 const UserNickName = styled.div`
@@ -47,7 +48,10 @@ const UserNickName = styled.div`
   bottom: 0;
   right: 0;
 
+  font-family: Pretendard;
   font-size: 16px;
+  font-style: normal;
   font-weight: 400;
-  color: #f7f7f7;
+  line-height: 19.36px;
+  color: black;
 `;

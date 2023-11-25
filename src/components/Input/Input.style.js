@@ -10,7 +10,8 @@ export const Wrapper = styled.textarea`
   input:focus {
     outline: none;
   }
-  ${({ customStyle }) => customStyle}
+
+  ${({ customstyle }) => customstyle}
 `;
 
 export const Error = styled.p`

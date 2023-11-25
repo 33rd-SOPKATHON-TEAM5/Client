@@ -6,3 +6,8 @@ export const userIdState = atom({
   key: "userIdState",
   default: 0,
 });
+
+export const userNicknameState = atom({
+  key: "userIdState",
+  default: "",
+});

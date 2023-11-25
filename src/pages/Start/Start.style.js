@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  align-items: center;
+
   width: 100vw;
   height: 100vh;
   background-color: #db1820;
@@ -17,18 +20,20 @@ export const TextContainer = styled.div`
   align-items: center;
   gap: 1rem;
   z-index: 1;
+
+  width: 80%;
 `;
 
 export const Text = styled.p`
   display: flex;
-  font-size: 16px;
-  display: relative;
-  bottom: 8rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+
   color: #fff;
   text-align: center;
+  font-family: EliceDXNeolliOTF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
 `;
 
 export const StartImg = styled.img`

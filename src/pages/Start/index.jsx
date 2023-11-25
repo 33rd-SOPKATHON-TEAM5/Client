@@ -21,7 +21,7 @@ function Start() {
       </S.TextContainer>
       <S.ButtonContainer>
         <Button
-          customStyle="width: 80%; background-color: #FFE17E; color: #008236;"
+          customstyle="width: 80%; background-color: #FFE17E; color: #008236;"
           onClick={handleButton}
         >
           울보산타 만나러 가기

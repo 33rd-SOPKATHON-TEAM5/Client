@@ -1,9 +1,9 @@
 import axios from "axios";
 
-//const apiBaseUrl = process.env.VITE_APP_BASE_URL;
+const apiBaseUrl = "https://www.sopkathon-team5.p-e.kr/";
 
 export const instance = axios.create({
-  //baseURL: apiBaseUrl,
+  baseURL: apiBaseUrl,
   withCredentials: true,
-  headers: {},
+  headers: { "Content-Type": "application/json" },
 });
