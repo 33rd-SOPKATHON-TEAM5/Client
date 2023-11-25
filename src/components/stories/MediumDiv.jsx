@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { MiddleCardImage } from '../../assets/Svgs';
+import { MiddleCardImage } from '../../assets/Svgs/Index';
 
 const MediumDiv = () => {
   return (

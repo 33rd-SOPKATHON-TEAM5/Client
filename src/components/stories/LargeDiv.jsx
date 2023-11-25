@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { BigCardImage } from '../../assets/Svgs';
+import { BigCardImage } from '../../assets/Svgs/Index';
 
 const LargeDiv = () => {
   return (
