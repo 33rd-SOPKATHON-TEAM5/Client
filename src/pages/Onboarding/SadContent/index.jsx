@@ -1,31 +1,37 @@
+/* eslint-disable no-unused-vars */
 // import { useRecoilState } from "recoil";
 import Button from "../../../components/Button";
 import Input from "../../../components/Input";
 import * as S from "./SadContent.style";
-// import { userIdState } from "../../../recoil/atom";
-//import { instance } from "../../../apis/api.instance";
+import { userIdState, userNicknameState } from "../../../recoil/atom";
+import { instance } from "../../../apis/api.instance";
 import { useState } from "react";
 import { LeaseImg, SantaImg } from "../../../assets/Images/Index";
 import ProgressBar from "../../../components/ProgressBar";
-//import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useRecoilState } from "recoil";
 
 function SadContent() {
-  // const [userRecoilId, setUserRecoilId] = useRecoilState(userIdState);
-  const [content, setContent] = useState("");
+  const [userRecoilId, setUserRecoilId] = useRecoilState(userIdState);
+  const [userRecoilNickname, setRecoilNickname] =
+    useRecoilState(userNicknameState);
+  const [cry_reason, setContent] = useState("");
   const [error, setError] = useState(false);
-  // const location = useLocation();
-  // const params = new URLSearchParams(location.search);
-  //const nickname = params.get("nickname");
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const user_nickname = params.get("nickname");
 
-  // const handleButton = () => {
-  //   const formData = [nickname,content];
+  const handleButton = () => {
+    const formData = [user_nickname, cry_reason];
 
-  //   const fetchAuth = () => instance.post(``, formData);
-  //   fetchAuth().then((response) => {
-  //   const userId = response.data.id;
-  //     // setUserRecoilId(userId);
-  //   });
-  // };
+    const fetchAuth = () => instance.post(`/cry`, formData);
+    fetchAuth().then((response) => {
+      setUserRecoilId(response.data.cry_id);
+      setRecoilNickname(response.data.user_nickname);
+    });
+    console.log(userRecoilId);
+    console.log(userRecoilNickname);
+  };
 
   const onChangeInput = (e) => {
     const input = e.target.value;
@@ -43,7 +49,7 @@ function SadContent() {
         maxLength={100}
         customstyle="height: 12.7rem"
         onChange={onChangeInput}
-        value={content}
+        value={cry_reason}
         placeholder="울었던 이야기를 알려줘"
         errorMessage={error}
       />
@@ -51,7 +57,10 @@ function SadContent() {
       <S.Img src={LeaseImg} />
       <S.Icon src={SantaImg} />
       <S.ButtonContainer>
-        <Button customstyle="width: 95%; background-color: #DE332E; color: #ffff;">
+        <Button
+          customstyle="width: 95%; background-color: #DE332E; color: #ffff;"
+          onClick={handleButton}
+        >
           울보산타에게 편지 전달하기
         </Button>
       </S.ButtonContainer>
