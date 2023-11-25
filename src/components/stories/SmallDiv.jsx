@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import {SmallCardImage} from '../../assets/Svgs';
+
+
 const SmallDiv = () => {
   return (
     <SmallContainer>
@@ -22,6 +25,7 @@ const SmallContainer = styled.div`
   border-radius: 0.6rem;
   background-color: grey;
   padding: 1rem 2rem;
+  background-image: url(${SmallCardImage});
 `;
 
 const Content = styled.div``;

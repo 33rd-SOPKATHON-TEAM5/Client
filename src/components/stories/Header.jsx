@@ -18,19 +18,19 @@ const HeaderContainer = styled.header`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 1rem;
+  padding: 2.9rem 0 1.4rem 0;
 `;
 
 const Title = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3rem;
+  height: 1.9rem;
 `;
 
 const ResultNum = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
+  height: 3.1rem;
 `;

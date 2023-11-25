@@ -14,24 +14,10 @@ const Stories = () => {
         <Header />
         <ResultDiv>
           <ResultContainer>
-          <SmallDiv />
-          <MediumDiv />
-          <LargeDiv />
-          <SmallDiv />
-          <MediumDiv />
-          <LargeDiv />
-          <SmallDiv />
-          <MediumDiv />
-          <LargeDiv />
-          <SmallDiv />
-          <MediumDiv />
-          <LargeDiv />
-          <SmallDiv />
-          <MediumDiv />
-          <LargeDiv />
-          <SmallDiv />
-          <MediumDiv />
-          <LargeDiv />
+            <SmallDiv />
+            <MediumDiv />
+            <LargeDiv />
+
           </ResultContainer>
         </ResultDiv>
         <Footer />
@@ -46,7 +32,7 @@ export default Stories;
 const PageWrapper = styled.div`
   width: 100vw;
   height: 100vh;
-  padding: 2rem;
+  padding: 0 1.6rem;
 `;
 const ContentWrapper = styled.div`
   width: 100%;
@@ -57,16 +43,15 @@ const ContentWrapper = styled.div`
 `;
 
 const ResultDiv = styled.main`
-
-
   overflow: hidden;
   overflow-y: scroll;
+  display: flex;
 
   width: 100%;
   height: calc(100vh - 18rem);
   padding: 3rem 1.6rem;
 
-  background-color: red;
+  border: 1px solid;
 `;
 
 const ResultContainer = styled.div`
@@ -74,7 +59,8 @@ const ResultContainer = styled.div`
   height: 100%;
 
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-`
+`;

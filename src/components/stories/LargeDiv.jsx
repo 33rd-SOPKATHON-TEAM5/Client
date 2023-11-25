@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import {BigCardImage} from '../../assets/Svgs';
+
 const LargeDiv = () => {
   return (
     <LargeContainer>
@@ -18,10 +20,12 @@ const LargeContainer = styled.article`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 18.1rem;
+  height: 181px;
   border-radius: 0.6rem;
   background-color: grey;
   padding: 1rem 2rem;
+  background-image: url(${BigCardImage});
+  background-size: cover;
 `;
 
 const Content = styled.div`

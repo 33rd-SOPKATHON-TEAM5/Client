@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import {MiddleCardImage} from '../../assets/Svgs';
+
 const MediumDiv = () => {
   return (
     <MediumContainer>
@@ -23,7 +25,7 @@ const MediumContainer = styled.div`
   width: 100%;
   height: 14.4rem;
   border-radius: 0.6rem;
-  background-color: grey;
+  background-image: url(${MiddleCardImage});
   padding: 1rem 2rem;
 `;
 
