@@ -10,7 +10,7 @@ const SmallDiv = () => {
     <SmallContainer>
       <ContentDiv>
         <Content>4년만난 남자친구랑 헤어져서 울었어요ㅠㅠㅠ</Content>
-          <UserNickName>닉네임</UserNickName>
+        <UserNickName>닉네임</UserNickName>
       </ContentDiv>
     </SmallContainer>
   );
@@ -27,7 +27,7 @@ const SmallContainer = styled.div`
 `;
 
 const ContentDiv = styled.div`
-position: relative;
+  position: relative;
   height: 5rem;
   display: flex;
   flex-direction: column;
@@ -37,12 +37,8 @@ position: relative;
 
 const Content = styled.div``;
 
-const NicknameContainer = styled.div`
-`
-
 const UserNickName = styled.div`
-position: absolute;
-bottom: 0;
-right: 0;
-
+  position: absolute;
+  bottom: 0;
+  right: 0;
 `;
