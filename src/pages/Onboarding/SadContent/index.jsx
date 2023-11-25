@@ -9,12 +9,14 @@ import { useState } from "react";
 import { LeaseImg, SantaImg } from "../../../assets/Images/Index";
 import ProgressBar from "../../../components/ProgressBar";
 import { useRecoilState, useRecoilValue } from "recoil";
+import { useNavigate } from "react-router";
 
 function SadContent() {
   const [userRecoilId, setUserRecoilId] = useRecoilState(userIdState);
   const user_nickname = useRecoilValue(userNicknameState);
   const [cry_reason, setContent] = useState("");
   const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   const handleButton = () => {
     const formData = { user_nickname, cry_reason };
@@ -24,6 +26,7 @@ function SadContent() {
       setUserRecoilId(response.data.cry_id);
     });
     console.log(userRecoilId);
+    navigate("/card");
   };
 
   const onChangeInput = (e) => {
