@@ -2,14 +2,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // import Main from '../../pages/Main/Main';
 import { styled } from "styled-components";
-import MainTest from "./components/main/MainTest";
+import Start from "./pages/Start";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Wrapper>
         <Routes>
-          <Route path="/" element={<MainTest />} />
+          <Route path="/" element={<Start />} />
         </Routes>
       </Wrapper>
     </BrowserRouter>
