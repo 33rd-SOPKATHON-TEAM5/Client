@@ -3,7 +3,6 @@ import Start from "./pages/Start";
 import NickName from "./pages/Onboarding/NickName";
 import SadContent from "./pages/Onboarding/SadContent";
 import CardPage from "./pages/CardPage/CardPage";
-
 import OthersResult from "./pages/Stories/Stories";
 
 
@@ -16,7 +15,6 @@ const Router = () => {
         <Route path="/onboarding/nickname" element={<NickName />} />
         <Route path="/onboarding/content" element={<SadContent />} />
         <Route path="/card" element={<CardPage />} />
-      {/* <Route path="/" element={<Main />} /> */} 
         <Route path="/stories" element={<OthersResult />} />
       </Routes>
     </BrowserRouter>
