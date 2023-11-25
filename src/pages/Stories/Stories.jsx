@@ -17,7 +17,6 @@ const Stories = () => {
             <SmallDiv />
             <MediumDiv />
             <LargeDiv />
-
           </ResultContainer>
         </ResultDiv>
         <Footer />

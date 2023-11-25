@@ -35,11 +35,19 @@ const ContentDiv = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-
-const Content = styled.div``;
+const Content = styled.div`
+  font-size: 16px;
+  font-weight: 600;
+  color: #f7f7f7;
+  line-height: 19.09px;
+`;
 
 const UserNickName = styled.div`
   position: absolute;
   bottom: 0;
   right: 0;
+
+  font-size: 16px;
+  font-weight: 400;
+  color: #f7f7f7;
 `;

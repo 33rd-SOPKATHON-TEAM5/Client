@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <FooterContainer>
       <HomeBtn>
-        <HomeBtnText>또 울러 가기</HomeBtnText>
+        <HomeBtnText>울보산타 알려주기</HomeBtnText>
       </HomeBtn>
       <ShareBtn>
-        <ShareBtnText>같이 울러 가기</ShareBtnText>
+        <ShareBtnText>울보산타 다시만나기</ShareBtnText>
       </ShareBtn>
     </FooterContainer>
   );
@@ -29,31 +29,38 @@ const FooterContainer = styled.div`
   height: 8rem;
   padding: 1.6rem;
 
-  background-color: aliceblue;
 `;
 
 const HomeBtn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: grey;
+  background-color: #5bb6e2;
   width: 16.2rem;
   height: 100%;
   border-radius: 0.4rem;
 `;
 
 // 폰트지정
-const HomeBtnText = styled.span``;
+const HomeBtnText = styled.span`
+  font-size: 16px;
+  color: #F7F7F7;
+  font-weight: 700;
+`;
 
 const ShareBtn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: grey;
+  background-color: #008236;
   width: 16.2rem;
   height: 100%;
   border-radius: 0.4rem;
 `;
 
 // 폰트지정
-const ShareBtnText = styled.span``;
+const ShareBtnText = styled.span`
+  font-size: 16px;
+  color: #F7F7F7;
+  font-weight: 700;
+`;
