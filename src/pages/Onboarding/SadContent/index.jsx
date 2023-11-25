@@ -19,6 +19,7 @@ function SadContent() {
 
   // const handleButton = () => {
   //   const formData = [nickname,content];
+
   //   const fetchAuth = () => instance.post(``, formData);
   //   fetchAuth().then((response) => {
   //   const userId = response.data.id;

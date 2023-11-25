@@ -10,6 +10,7 @@ export const Wrapper = styled.textarea`
   input:focus {
     outline: none;
   }
+
   ${({ customstyle }) => customstyle}
 `;
 

@@ -17,6 +17,7 @@ function NickName() {
 
     setNickname(input);
   };
+
   return (
     <S.Wrapper>
       <S.Title>선물 받을 별명 알려줘!</S.Title>

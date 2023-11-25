@@ -6,7 +6,9 @@ function Input({
   value,
   placeholder,
   disabled,
+
   customstyle,
+
   maxLength,
   onChange,
   errorMessage,
