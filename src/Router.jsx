@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import styled from "styled-components";
-
+import Start from "./pages/Start";
+import NickName from "./pages/Onboarding/NickName";
+import SadContent from "./pages/Onboarding/SadContent";
 import CardPage from "./pages/CardPage/CardPage";
 
 const Router = () => {
@@ -8,6 +9,9 @@ const Router = () => {
     // <Wrapper>
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Start />} />
+        <Route path="/onboarding/nickname" element={<NickName />} />
+        <Route path="/onboarding/content" element={<SadContent />} />
         <Route path="/card" element={<CardPage />} />
       </Routes>
     </BrowserRouter>
