@@ -1,13 +1,11 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // import Main from '../../pages/Main/Main';
-import MainTest from './components/main/MainTest';
-import { styled } from 'styled-components';
-
+import { styled } from "styled-components";
+import MainTest from "./components/main/MainTest";
 
 const Router = () => {
   return (
-  
     <BrowserRouter>
       <Wrapper>
         <Routes>
@@ -15,11 +13,10 @@ const Router = () => {
         </Routes>
       </Wrapper>
     </BrowserRouter>
-
   );
 };
 
-const Wrapper=styled.div`
+const Wrapper = styled.div`
   max-width: 425px;
   width: 100vw;
   min-height: 100vh;
@@ -28,10 +25,8 @@ const Wrapper=styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  overflow: hidden;
-  background-color: #fff;
-  
-`
-
+  background-color: red;
+  word-break: break-all;
+`;
 
 export default Router;
