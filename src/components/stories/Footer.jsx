@@ -1,25 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import { useNavigate } from 'react-router-dom';
+
 const Footer = () => {
-  const handleCopyClipBoard = async(e, text) => {
+  const navigate = useNavigate();
+  const [linkBtnContext, setLinkBtnContext] = useState('울보산타 알려주기');
+
+  const handleCopyClipBoard = async (e, text) => {
     e.preventDefault();
-    try{
+    try {
       await navigator.clipboard.writeText(text);
-      alert("클립보드에 링크가 복사되었어요.")
-    } catch(err) {
+      setLinkBtnContext('링크 복사 완료!');
+    } catch (err) {
       console.log(err.message);
     }
-  }
+  };
 
+  const onClickMoveHome = (e) => {
+    e.preventDefault();
+    navigate('/');
+  };
 
   return (
     <FooterContainer>
       <HomeBtn>
-        <HomeBtnText onClick={(e) => handleCopyClipBoard(e, 'url')}>울보산타 알려주기</HomeBtnText>
+        <HomeBtnText onClick={(e) => handleCopyClipBoard(e, 'url')}>{linkBtnContext}</HomeBtnText>
       </HomeBtn>
       <ShareBtn>
-        <ShareBtnText>울보산타 다시 만나기</ShareBtnText>
+        <ShareBtnText onClick={onClickMoveHome}>울보산타 다시 만나기</ShareBtnText>
       </ShareBtn>
     </FooterContainer>
   );
@@ -39,7 +48,6 @@ const FooterContainer = styled.div`
   width: 100vw;
   height: 8rem;
   padding: 1.6rem;
-
 `;
 
 const HomeBtn = styled.button`
@@ -55,7 +63,7 @@ const HomeBtn = styled.button`
 // 폰트지정
 const HomeBtnText = styled.span`
   font-size: 16px;
-  color: #F7F7F7;
+  color: #f7f7f7;
   font-weight: 700;
 `;
 
@@ -72,6 +80,6 @@ const ShareBtn = styled.button`
 // 폰트지정
 const ShareBtnText = styled.span`
   font-size: 16px;
-  color: #F7F7F7;
+  color: #f7f7f7;
   font-weight: 700;
 `;
