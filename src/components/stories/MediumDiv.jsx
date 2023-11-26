@@ -4,13 +4,11 @@ import styled from "styled-components";
 import { MiddleCardImage } from "../../assets/Svgs/Index";
 
 const MediumDiv = (props) => {
-  const {userName, cryReason} = props;
+  const { userName, cryReason } = props;
   return (
     <MediumContainer>
       <ContentDiv>
-        <Content>
-          {cryReason}
-        </Content>
+        <Content>{cryReason}</Content>
         <UserNickName>{userName}</UserNickName>
       </ContentDiv>
     </MediumContainer>
@@ -24,6 +22,7 @@ const MediumContainer = styled.article`
   height: 14.4rem;
   padding: 2.8rem 2.4rem;
   border-radius: 0.6rem;
+  background-color: #de332e;
   background-image: url(${MiddleCardImage});
 `;
 
@@ -41,7 +40,7 @@ const Content = styled.div`
   line-height: 19.09px;
   font-weight: 600;
   color: #f7f7f7;
-  text-align:center;
+  text-align: center;
 `;
 
 const UserNickName = styled.div`

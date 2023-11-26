@@ -6,7 +6,7 @@ import { SmallCardImage } from "../../assets/Svgs/Index";
 // content에 가져온 데이터
 // 닉네임에 get 해온 유저닉네임
 const SmallDiv = (props) => {
-  const {userName, cryReason} = props;
+  const { userName, cryReason } = props;
   return (
     <SmallContainer>
       <ContentDiv>
@@ -24,6 +24,7 @@ const SmallContainer = styled.article`
   height: 10.6rem;
   padding: 2.8rem 2.4rem;
   border-radius: 0.6rem;
+  background-color: #5bb6e2;
   background-image: url(${SmallCardImage});
 `;
 
